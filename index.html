@@ -140,15 +140,31 @@ body.integrar-bg{background:radial-gradient(ellipse at 20% 30%,#6050a0,transpare
 .sc-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,5vw,2.1rem);font-weight:400;color:#fff;text-align:center;line-height:1.1;}
 .sc-reflection{
   font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(.75rem,2.5vw,.85rem);line-height:1.65;
-  text-align:center;color:rgba(255,255,255,.9);
+  font-size:clamp(.82rem,2.8vw,.95rem);line-height:1.7;
+  text-align:center;color:#fff;
+  text-shadow:0 1px 8px rgba(0,0,0,.6), 0 0 30px rgba(0,0,0,.4);
   flex:1;display:flex;align-items:center;padding:.3rem 0;
   overflow:hidden;
 }
-.sc-prompt-wrap{position:relative;width:120px;height:70px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.sc-prompt-svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:135px;height:135px;}
-.sc-prompt-path-text{font-size:8.5px;fill:rgba(255,255,255,.8);font-family:'Cormorant Garamond',serif;font-style:italic;}
-.sc-star-mid{font-size:.9rem;}
+.sc-prompt-wrap{
+  position:relative;
+  width:min(220px, 65vw);
+  height:min(220px, 65vw);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.sc-prompt-svg{
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;
+}
+.sc-prompt-path-text{
+  font-size:11px;
+  fill:rgba(255,255,255,.95);
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));
+}
+.sc-star-mid{font-size:1.2rem;text-shadow:0 0 10px rgba(255,255,255,.8);}
 .sc-aff{text-align:center;}
 .sc-aff-label{display:block;font-size:.58rem;letter-spacing:.2em;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:.2rem;}
 .sc-aff-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.78rem,2.5vw,.88rem);color:#fff;line-height:1.4;}
@@ -164,7 +180,13 @@ body.integrar-bg{background:radial-gradient(ellipse at 20% 30%,#6050a0,transpare
 .story-card::before{
   content:'';
   position:absolute;inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,.15) 0%, rgba(0,0,0,.05) 40%, rgba(0,0,0,.25) 100%);
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.45) 0%,
+    rgba(0,0,0,.15) 35%,
+    rgba(0,0,0,.15) 60%,
+    rgba(0,0,0,.55) 100%
+  );
   border-radius:18px;
   pointer-events:none;
   z-index:0;
@@ -283,9 +305,9 @@ body.integrar-bg{background:radial-gradient(ellipse at 20% 30%,#6050a0,transpare
         <div class="sc-title" id="scTitle"></div>
         <div class="sc-reflection" id="scRefl"><span></span></div>
         <div class="sc-prompt-wrap">
-          <svg class="sc-prompt-svg" viewBox="0 0 135 135">
+          <svg class="sc-prompt-svg" viewBox="0 0 200 200">
             <defs>
-              <path id="cp" d="M 67.5,67.5 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0"/>
+              <path id="cp" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"/>
             </defs>
             <text class="sc-prompt-path-text">
               <textPath href="#cp" id="ptxt" startOffset="0%"></textPath>
@@ -493,9 +515,12 @@ function renderAll(c){
   document.getElementById('scNum').textContent=c.sn;
   document.getElementById('scTitle').textContent=t.title;
   document.getElementById('scRefl').innerHTML='<span>'+t.refl.replace(/\n/g,'<br>')+'</span>';
-  const ps='✦ '+t.prompt+' ✦ ';
-  const maxChars=60;
-  document.getElementById('ptxt').textContent=ps.length>maxChars?t.prompt.substring(0,maxChars-3)+'...':ps;
+  const ps='✦  '+t.prompt+'  ';
+  // Repeat to fill circle if short
+  const target=120;
+  let filled=ps;
+  while(filled.length<target)filled+=ps;
+  document.getElementById('ptxt').textContent=filled.substring(0,target);
   document.getElementById('affLbl').textContent=lang==='es'?'Afirmación':'Affirmation';
   document.getElementById('affTxt').textContent=t.aff;
   document.getElementById('shareTxt').textContent=lang==='es'?'compartir':'share';
