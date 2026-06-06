@@ -154,11 +154,22 @@ body.integrar-bg{background:radial-gradient(ellipse at 20% 30%,#6050a0,transpare
 .sc-aff-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.78rem,2.5vw,.88rem);color:#fff;line-height:1.4;}
 .share-pill{margin-top:.7rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:.35rem .9rem;font-size:.65rem;letter-spacing:.12em;color:rgba(255,255,255,.6);cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:all .3s;flex-shrink:0;}
 
-/* Panel gradients */
-.gd-despertar{background:radial-gradient(ellipse at 30% 25%,#e07090,transparent 60%),radial-gradient(ellipse at 75% 70%,#d08050,transparent 55%),radial-gradient(ellipse at 50% 95%,#b070c0,transparent 45%),#c07080;}
-.gd-soltar{background:radial-gradient(ellipse at 35% 25%,#d07040,transparent 60%),radial-gradient(ellipse at 70% 75%,#80a868,transparent 55%),radial-gradient(ellipse at 20% 75%,#b0a060,transparent 45%),#b08860;}
-.gd-crecer{background:radial-gradient(ellipse at 25% 35%,#68b0b0,transparent 60%),radial-gradient(ellipse at 75% 30%,#8090d0,transparent 55%),radial-gradient(ellipse at 50% 90%,#c090d0,transparent 45%),#80a8c0;}
-.gd-integrar{background:radial-gradient(ellipse at 35% 30%,#8878c8,transparent 60%),radial-gradient(ellipse at 75% 65%,#6090d0,transparent 55%),radial-gradient(ellipse at 20% 75%,#a0b8e0,transparent 45%),#7880c0;}
+/* Panel image backgrounds */
+.gd-despertar{background:url('despertar.jpeg') center center/cover no-repeat;}
+.gd-soltar{background:url('soltar.jpeg') center center/cover no-repeat;}
+.gd-crecer{background:url('crecer.jpeg') center center/cover no-repeat;}
+.gd-integrar{background:url('integrar.jpeg') center center/cover no-repeat;}
+
+/* Text overlay so content stays readable */
+.story-card::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.15) 0%, rgba(0,0,0,.05) 40%, rgba(0,0,0,.25) 100%);
+  border-radius:18px;
+  pointer-events:none;
+  z-index:0;
+}
+.story-card > *{position:relative;z-index:1;}
 
 /* Panels 3-5 shared */
 .inner-panel{
