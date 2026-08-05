@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beto Pasteles — Pasteles y galletas para perros</title>
+<meta name="description" content="Pasteles y galletas naturales para perros, elaborados con ingredientes reales y mucho amor. Personaliza el pastel de tu peludo y celebra su día como se merece.">
+<meta name="theme-color" content="#F1EDE6">
+<meta property="og:title" content="Beto Pasteles — Pasteles y galletas para perros">
+<meta property="og:description" content="Hecho con amor, para tu mejor amigo. Pasteles y galletas naturales para perros.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23F1EDE6'/><ellipse cx='34' cy='36' rx='13' ry='10' fill='%2314110F'/><ellipse cx='68' cy='58' rx='16' ry='12' fill='%2314110F'/><ellipse cx='30' cy='72' rx='8' ry='6' fill='%2314110F'/></svg>">
+</head>
+<body>
+
+<!-- ============ SPRITE DE ICONOS ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="i-cake" viewBox="0 0 64 64">
+      <path d="M32 6v7M32 6c-2.2 1.6-2.2 4 0 5.4" />
+      <path d="M14 26h36c2.2 0 4 1.8 4 4v6c-3 2.6-6 2.6-9 0s-6-2.6-9 0-6 2.6-9 0-6-2.6-9 0-6 2.6-9 0v-6c0-2.2 1.8-4 4-4Z"/>
+      <path d="M10 38v14c0 2.2 1.8 4 4 4h36c2.2 0 4-1.8 4-4V38"/>
+      <path d="M10 46c3 2.6 6 2.6 9 0s6-2.6 9 0 6 2.6 9 0 6-2.6 9 0 6 2.6 8 0"/>
+      <path d="M32 13v13"/>
+    </symbol>
+    <symbol id="i-bone" viewBox="0 0 64 64">
+      <path d="M22 24a8.5 8.5 0 1 0-1.2 5.2A8.5 8.5 0 1 0 22 34h20a8.5 8.5 0 1 0 1.2-4.8A8.5 8.5 0 1 0 42 24Z"/>
+    </symbol>
+    <symbol id="i-gift" viewBox="0 0 64 64">
+      <path d="M10 26h44v10H10z"/>
+      <path d="M14 36v18c0 1.6 1.4 3 3 3h30c1.6 0 3-1.4 3-3V36"/>
+      <path d="M32 26v31"/>
+      <path d="M32 26s-4-10-9-10a5.5 5.5 0 0 0 0 11h9Zm0 0s4-10 9-10a5.5 5.5 0 0 1 0 11h-9Z"/>
+    </symbol>
+    <symbol id="i-hat" viewBox="0 0 64 64">
+      <path d="M32 10 48 48H16L32 10Z"/>
+      <path d="M32 10c-2.6 1.4-2.6 4.6 0 6"/>
+      <circle cx="32" cy="7" r="3.4"/>
+      <path d="M24 30c4 2.6 12 2.6 16 0M21 40c5 3 17 3 22 0"/>
+      <path d="M13 51c5 2.6 11-2.6 16 0s10 2.6 15 0 6 0 7 1"/>
+    </symbol>
+    <symbol id="i-paw" viewBox="0 0 64 64">
+      <ellipse cx="20" cy="20" rx="6.5" ry="8.5" transform="rotate(-18 20 20)"/>
+      <ellipse cx="34" cy="15" rx="6" ry="8.5"/>
+      <ellipse cx="47" cy="21" rx="6.5" ry="8.5" transform="rotate(18 47 21)"/>
+      <ellipse cx="54" cy="35" rx="6" ry="7" transform="rotate(28 54 35)"/>
+      <path d="M32 30c8 0 15 6.5 15 13.5S40 56 32 56s-15-4.5-15-12.5S24 30 32 30Z"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 64 64">
+      <path d="M32 54S8 40 8 24.5A12.5 12.5 0 0 1 32 19a12.5 12.5 0 0 1 24 5.5C56 40 32 54 32 54Z"/>
+    </symbol>
+    <symbol id="i-leaf" viewBox="0 0 64 64">
+      <path d="M52 12C26 12 12 24 12 42c0 6 4 10 10 10 18 0 30-16 30-40Z"/>
+      <path d="M44 20C32 26 24 36 20 50"/>
+    </symbol>
+    <symbol id="i-box" viewBox="0 0 64 64">
+      <path d="M8 20 32 8l24 12-24 12L8 20Z"/>
+      <path d="M8 20v24l24 12 24-12V20"/>
+      <path d="M32 32v24"/>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 64 64">
+      <circle cx="32" cy="22" r="11"/>
+      <path d="M10 56c2-12 11-18 22-18s20 6 22 18"/>
+    </symbol>
+    <symbol id="i-bag" viewBox="0 0 64 64">
+      <path d="M12 20h40l4 36H8l4-36Z"/>
+      <path d="M22 26v-6a10 10 0 0 1 20 0v6"/>
+    </symbol>
+    <symbol id="i-ig" viewBox="0 0 64 64">
+      <rect x="10" y="10" width="44" height="44" rx="13"/>
+      <circle cx="32" cy="32" r="11"/>
+      <circle cx="45.5" cy="18.5" r="2.4" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-fb" viewBox="0 0 64 64">
+      <path d="M38 12h-6c-6 0-10 4-10 10v6h-7v10h7v18h11V38h8l2-10h-10v-4c0-2 1-2 3-2h6V12Z"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 64 64">
+      <path d="M32 8a24 24 0 0 0-20.8 35.9L8 56l12.4-3.1A24 24 0 1 0 32 8Z"/>
+      <path d="M23 22c1.5-1 3 .5 3.6 2l1.2 3-2 2.5c1.6 3.6 4.6 6.6 8.2 8.2l2.5-2 3 1.2c1.5.6 3 2.1 2 3.6-1.6 2.4-5.4 2.7-8.6 1.3a26 26 0 0 1-12.4-12.4c-1.4-3.2-1.1-6.9 1.3-8.5Z"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 64 64"><path d="M10 20h44M10 32h44M10 44h44"/></symbol>
+    <symbol id="i-close" viewBox="0 0 64 64"><path d="M16 16l32 32M48 16 16 48"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 64 64"><path d="M12 32h40M38 18l14 14-14 14"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ============ ANUNCIO ============ -->
+<div class="ticker" role="status">
+  <div class="ticker__track">
+    <span>Envío gratis en pedidos mayores a $700 MXN</span><span class="ticker__dot"></span>
+    <span>Pedidos personalizados con 48 h de anticipación</span><span class="ticker__dot"></span>
+    <span>Ingredientes 100 % naturales, sin azúcar ni conservadores</span><span class="ticker__dot"></span>
+    <span>Envío gratis en pedidos mayores a $700 MXN</span><span class="ticker__dot"></span>
+    <span>Pedidos personalizados con 48 h de anticipación</span><span class="ticker__dot"></span>
+    <span>Ingredientes 100 % naturales, sin azúcar ni conservadores</span><span class="ticker__dot"></span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <button class="iconbtn header__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <svg class="ico"><use href="#i-menu"/></svg>
+    </button>
+
+    <a class="brand" href="#inicio" aria-label="Beto Pasteles, inicio">
+      <span class="brand__name">Beto Pasteles</span>
+      <span class="brand__tag">Pasteles y galletas para perros</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#personaliza">Personaliza</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="iconbtn" id="account" aria-label="Mi cuenta">
+        <svg class="ico"><use href="#i-user"/></svg>
+      </button>
+      <button class="iconbtn iconbtn--cart" id="cartBtn" aria-label="Abrir carrito">
+        <svg class="ico"><use href="#i-bag"/></svg>
+        <span class="badge" id="cartCount" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__inner">
+    <div class="hero__copy reveal">
+      <h1 class="display">Hecho con amor,<br>para tu mejor amigo</h1>
+      <svg class="hero__heart ico"><use href="#i-heart"/></svg>
+      <p class="lead">
+        Pasteles y galletas naturales para perros,<br>
+        elaborados con ingredientes reales<br>
+        y mucho amor.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--dark" href="#productos">Ordenar ahora <svg class="ico ico--sm"><use href="#i-paw"/></svg></a>
+        <a class="btn btn--ghost" href="#personaliza">Personalizar pastel</a>
+      </div>
+    </div>
+
+    <div class="hero__art reveal">
+      <!-- Caja de regalo abierta con pastel -->
+      <svg viewBox="0 0 620 520" role="img" aria-label="Caja de regalo Beto Pasteles abierta con un pastel de perro adentro">
+        <defs>
+          <linearGradient id="gShadow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#14110F" stop-opacity=".10"/>
+            <stop offset="1" stop-color="#14110F" stop-opacity="0"/>
+          </linearGradient>
+          <pattern id="pSpots" width="70" height="70" patternUnits="userSpaceOnUse">
+            <ellipse cx="16" cy="18" rx="7" ry="5.4" fill="#14110F" transform="rotate(-20 16 18)"/>
+            <ellipse cx="48" cy="40" rx="5" ry="4" fill="#14110F" transform="rotate(25 48 40)"/>
+            <ellipse cx="28" cy="56" rx="4" ry="3" fill="#14110F" transform="rotate(10 28 56)"/>
+            <ellipse cx="60" cy="12" rx="3.4" ry="2.6" fill="#14110F" transform="rotate(-8 60 12)"/>
+          </pattern>
+        </defs>
+
+        <ellipse cx="320" cy="474" rx="220" ry="28" fill="url(#gShadow)"/>
+
+        <!-- Tapa recargada atrás, con el dálmata dibujado -->
+        <g class="art-lid" stroke-linejoin="round">
+          <path d="M336 208 L590 168 L596 194 L342 234 Z" fill="#EFEAE1" stroke="#14110F" stroke-width="2.2"/>
+          <path d="M306 74 L566 34 L590 168 L336 208 Z" fill="#FBF9F5" stroke="#14110F" stroke-width="2.2"/>
+          <path d="M306 74 L566 34 L590 168 L336 208 Z" fill="url(#pSpots)" opacity=".1"/>
+          <g transform="translate(392 62) rotate(-8) scale(.92)" fill="none" stroke="#14110F" stroke-width="2.6" stroke-linecap="round">
+            <path d="M97 106c9-1 13-9 11-17"/>
+            <path d="M66 54c-15 5-26 17-30 32-3 11-3 21-1 28h60c2-7 3-17 0-28-4-15-14-27-29-32Z" fill="#FBF9F5"/>
+            <path d="M53 88c5 7 7 16 7 26M78 88c-4 7-6 16-6 26"/>
+            <path d="M50 26c-9-3-16 4-16 13s6 16 13 15" fill="#FBF9F5"/>
+            <path d="M83 26c9-3 16 4 16 13s-6 16-13 15" fill="#FBF9F5"/>
+            <circle cx="66" cy="34" r="20" fill="#FBF9F5"/>
+            <ellipse cx="66" cy="45" rx="10" ry="7" fill="#FBF9F5"/>
+            <ellipse cx="66" cy="41" rx="3.6" ry="2.6" fill="#14110F" stroke="none"/>
+            <path d="M66 44v4M66 48c-3 3-7 3-9 1M66 48c3 3 7 3 9 1" stroke-width="2"/>
+            <circle cx="57" cy="30" r="2.2" fill="#14110F" stroke="none"/>
+            <circle cx="75" cy="30" r="2.2" fill="#14110F" stroke="none"/>
+            <ellipse cx="52" cy="70" rx="6" ry="4.6" fill="#14110F" stroke="none" transform="rotate(-16 52 70)"/>
+            <ellipse cx="76" cy="82" rx="5" ry="3.8" fill="#14110F" stroke="none" transform="rotate(14 76 82)"/>
+            <ellipse cx="83" cy="34" rx="4.4" ry="3.4" fill="#14110F" stroke="none" transform="rotate(20 83 34)"/>
+          </g>
+        </g>
+
+        <!-- Interior de la caja -->
+        <path d="M206 246 L486 246 L430 300 L150 300 Z" fill="#E7E0D4" stroke="#14110F" stroke-width="2.2" stroke-linejoin="round"/>
+
+        <!-- Pastel dentro de la caja -->
+        <g class="art-cake">
+          <path d="M218 268v104c0 17 45 29 100 29s100-12 100-29V268Z" fill="#FBF9F5" stroke="#14110F" stroke-width="2.4"/>
+          <ellipse cx="318" cy="268" rx="100" ry="28" fill="#CFE0D4" stroke="#14110F" stroke-width="2.4"/>
+          <ellipse cx="318" cy="268" rx="88" ry="23" fill="none" stroke="#14110F" stroke-width="1.2" opacity=".32"/>
+          <!-- borde de merengue -->
+          <g fill="#F6EFE2" stroke="#14110F" stroke-width="1.6">
+            <ellipse cx="224" cy="271" rx="12" ry="9"/><ellipse cx="252" cy="285" rx="12" ry="9"/>
+            <ellipse cx="286" cy="294" rx="12" ry="9"/><ellipse cx="318" cy="297" rx="12" ry="9"/>
+            <ellipse cx="350" cy="294" rx="12" ry="9"/><ellipse cx="384" cy="285" rx="12" ry="9"/>
+            <ellipse cx="412" cy="271" rx="12" ry="9"/>
+          </g>
+          <!-- hueso -->
+          <g transform="translate(263 245) scale(1.1)" fill="#DFC49A" stroke="#14110F" stroke-width="2">
+            <path d="M26 4c7 0 12 5 12 11h24c0-6 5-11 12-11s12 5 12 11c0 2-1 4-2 6 1 2 2 4 2 6 0 6-5 11-12 11s-12-5-12-11H38c0 6-5 11-12 11s-12-5-12-11c0-2 1-4 2-6-1-2-2-4-2-6 0-6 5-11 12-11Z"/>
+          </g>
+        </g>
+
+        <!-- Costado derecho de la caja -->
+        <path d="M430 300 L486 246 L478 398 L422 452 Z" fill="#F3EEE6" stroke="#14110F" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M430 300 L486 246 L478 398 L422 452 Z" fill="url(#pSpots)" opacity=".8"/>
+
+        <!-- Frente de la caja -->
+        <path d="M150 300 L430 300 L422 452 L158 452 Z" fill="#FFFDF9" stroke="#14110F" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M150 300 L430 300 L422 452 L158 452 Z" fill="url(#pSpots)"/>
+        <text class="serif" x="322" y="396" text-anchor="middle" font-size="26" fill="#14110F"
+              stroke="#FFFDF9" stroke-width="6" paint-order="stroke" letter-spacing="2.5">BETO PASTELES</text>
+
+        <!-- Tapa recargada al frente -->
+        <g class="art-lid2" stroke-linejoin="round">
+          <path d="M44 374 L222 342 L228 366 L50 398 Z" fill="#EFEAE1" stroke="#14110F" stroke-width="2.2"/>
+          <path d="M26 270 L204 238 L222 342 L44 374 Z" fill="#FBF9F5" stroke="#14110F" stroke-width="2.2"/>
+          <text class="script" x="118" y="292" text-anchor="middle" transform="rotate(-10 118 292)" font-size="27" fill="#14110F">for Lilou</text>
+          <text class="tiny" x="126" y="326" text-anchor="middle" transform="rotate(-10 126 326)" font-size="11.5" fill="#14110F" letter-spacing="1.5">YOUR DOG’S FAVORITE GIFT</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="spots" aria-hidden="true"></div>
+
+<!-- ============ CATEGORÍAS ============ -->
+<section class="section section--tight" id="categorias">
+  <header class="sechead reveal">
+    <h2 class="display">Para cada ocasión especial</h2>
+    <svg class="sechead__heart ico"><use href="#i-heart"/></svg>
+  </header>
+
+  <div class="cats">
+    <article class="cat reveal">
+      <svg class="cat__ico ico"><use href="#i-cake"/></svg>
+      <h3>Pasteles</h3>
+      <p>Para cumpleaños<br>y celebraciones</p>
+      <a class="btn btn--outline btn--sm" href="#productos" data-filter="pastel">Ver más</a>
+    </article>
+    <article class="cat reveal">
+      <svg class="cat__ico ico"><use href="#i-bone"/></svg>
+      <h3>Galletas</h3>
+      <p>Deliciosas y nutritivas,<br>hechas con ingredientes reales</p>
+      <a class="btn btn--outline btn--sm" href="#productos" data-filter="galleta">Ver más</a>
+    </article>
+    <article class="cat reveal">
+      <svg class="cat__ico ico"><use href="#i-gift"/></svg>
+      <h3>Kits de regalo</h3>
+      <p>El detalle perfecto<br>para tu peludo</p>
+      <a class="btn btn--outline btn--sm" href="#productos" data-filter="kit">Ver más</a>
+    </article>
+    <article class="cat reveal">
+      <svg class="cat__ico ico"><use href="#i-hat"/></svg>
+      <h3>Personaliza</h3>
+      <p>Diseña un pastel<br>tan único como él</p>
+      <a class="btn btn--outline btn--sm" href="#personaliza">Ver más</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PRODUCTOS ============ -->
+<section class="section" id="productos">
+  <header class="sechead reveal">
+    <h2 class="display">Nuestros favoritos</h2>
+    <svg class="sechead__heart ico"><use href="#i-heart"/></svg>
+  </header>
+
+  <div class="filters reveal" role="tablist" aria-label="Filtrar productos">
+    <button class="chip is-active" role="tab" aria-selected="true" data-filter="todos">Todos</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="pastel">Pasteles</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="galleta">Galletas</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="kit">Kits</button>
+  </div>
+
+  <div class="grid" id="grid"><!-- inyectado por script.js --></div>
+
+  <p class="grid__empty" id="gridEmpty" hidden>No hay productos en esta categoría todavía.</p>
+
+  <div class="section__cta">
+    <button class="btn btn--dark" id="showAll">Ver todos los productos <svg class="ico ico--sm"><use href="#i-paw"/></svg></button>
+  </div>
+</section>
+
+<!-- ============ PERSONALIZA ============ -->
+<section class="section band" id="personaliza">
+  <div class="custom">
+    <div class="custom__preview reveal">
+      <svg viewBox="0 0 420 380" role="img" aria-label="Vista previa del pastel personalizado">
+        <ellipse cx="210" cy="330" rx="150" ry="26" fill="#14110F" opacity=".07"/>
+        <!-- cuerpo -->
+        <path id="cakeBody" d="M70 190v100c0 20 63 34 140 34s140-14 140-34V190Z" fill="#FBF9F5" stroke="#14110F" stroke-width="2.4"/>
+        <g id="cakeBodySpots" class="is-hidden">
+          <ellipse cx="112" cy="232" rx="12" ry="9" fill="#14110F" transform="rotate(-16 112 232)"/>
+          <ellipse cx="168" cy="268" rx="9" ry="7" fill="#14110F" transform="rotate(18 168 268)"/>
+          <ellipse cx="228" cy="234" rx="13" ry="9" fill="#14110F" transform="rotate(-6 228 234)"/>
+          <ellipse cx="286" cy="272" rx="8" ry="6" fill="#14110F" transform="rotate(22 286 272)"/>
+          <ellipse cx="316" cy="228" rx="10" ry="8" fill="#14110F" transform="rotate(-24 316 228)"/>
+          <ellipse cx="140" cy="296" rx="7" ry="5" fill="#14110F" transform="rotate(8 140 296)"/>
+          <ellipse cx="246" cy="300" rx="8" ry="6" fill="#14110F" transform="rotate(-14 246 300)"/>
+        </g>
+        <!-- cubierta -->
+        <ellipse id="cakeTop" cx="210" cy="190" rx="140" ry="38" fill="#CFE0D4" stroke="#14110F" stroke-width="2.4"/>
+        <ellipse cx="210" cy="190" rx="124" ry="32" fill="none" stroke="#14110F" stroke-width="1.2" opacity=".3"/>
+        <!-- merengue -->
+        <g fill="#F6EFE2" stroke="#14110F" stroke-width="1.6">
+          <ellipse cx="80" cy="194" rx="14" ry="10"/><ellipse cx="116" cy="211" rx="14" ry="10"/>
+          <ellipse cx="160" cy="222" rx="14" ry="10"/><ellipse cx="210" cy="226" rx="14" ry="10"/>
+          <ellipse cx="260" cy="222" rx="14" ry="10"/><ellipse cx="304" cy="211" rx="14" ry="10"/>
+          <ellipse cx="340" cy="194" rx="14" ry="10"/>
+        </g>
+        <!-- topping -->
+        <g id="topBone" transform="translate(160 158)" fill="#DFC49A" stroke="#14110F" stroke-width="2">
+          <path d="M26 4c7 0 12 5 12 11h24c0-6 5-11 12-11s12 5 12 11c0 2-1 4-2 6 1 2 2 4 2 6 0 6-5 11-12 11s-12-5-12-11H38c0 6-5 11-12 11s-12-5-12-11c0-2 1-4 2-6-1-2-2-4-2-6 0-6 5-11 12-11Z"/>
+        </g>
+        <g id="topPaw" class="is-hidden" transform="translate(178 142) scale(0.9)" fill="#DFC49A" stroke="#14110F" stroke-width="2">
+          <ellipse cx="10" cy="14" rx="6" ry="8" transform="rotate(-18 10 14)"/>
+          <ellipse cx="28" cy="8" rx="6" ry="8"/>
+          <ellipse cx="46" cy="14" rx="6" ry="8" transform="rotate(18 46 14)"/>
+          <ellipse cx="56" cy="30" rx="5.4" ry="6.6" transform="rotate(28 56 30)"/>
+          <path d="M28 26c9 0 16 6 16 12s-7 10-16 10-16-4-16-10 7-12 16-12Z"/>
+        </g>
+        <g id="topHeart" class="is-hidden" transform="translate(186 146) scale(0.62)" fill="#DFC49A" stroke="#14110F" stroke-width="3">
+          <path d="M40 66S6 46 6 26A12 12 0 0 1 40 16 12 12 0 0 1 74 26c0 20-34 40-34 40Z"/>
+        </g>
+        <!-- nombre -->
+        <text id="cakeName" class="script" x="210" y="272" text-anchor="middle" font-size="46" fill="#14110F">Luna</text>
+      </svg>
+      <p class="custom__note">Vista previa ilustrativa · el diseño final se confirma por WhatsApp</p>
+    </div>
+
+    <form class="custom__form reveal" id="customForm" novalidate>
+      <h2 class="display">Diseña su pastel</h2>
+      <p class="lead">Tú nos dices cómo es tu peludo y nosotros lo horneamos. Sin azúcar, sin chocolate, sin conservadores: solo cosas que sí puede comer.</p>
+
+      <div class="field">
+        <label for="petName">Nombre del peludo</label>
+        <input id="petName" name="petName" type="text" maxlength="12" placeholder="Luna" autocomplete="off">
+        <span class="hint">Máx. 12 caracteres · va escrito sobre el pastel</span>
+      </div>
+
+      <div class="field">
+        <span class="label">Tamaño</span>
+        <div class="opts" role="radiogroup" aria-label="Tamaño">
+          <label class="opt"><input type="radio" name="size" value="Chico (1-2 perritos) · $390" checked data-price="390"><span>Chico<small>1–2 perritos · $390</small></span></label>
+          <label class="opt"><input type="radio" name="size" value="Mediano (3-5 perritos) · $490" data-price="490"><span>Mediano<small>3–5 perritos · $490</small></span></label>
+          <label class="opt"><input type="radio" name="size" value="Grande (fiesta) · $690" data-price="690"><span>Grande<small>Fiesta · $690</small></span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="label">Cubierta</span>
+        <div class="opts opts--swatch" role="radiogroup" aria-label="Cubierta">
+          <label class="opt opt--sw"><input type="radio" name="frosting" value="Menta" checked data-color="#CFE0D4"><span style="--sw:#CFE0D4">Menta</span></label>
+          <label class="opt opt--sw"><input type="radio" name="frosting" value="Vainilla" data-color="#F4EBDA"><span style="--sw:#F4EBDA">Vainilla</span></label>
+          <label class="opt opt--sw"><input type="radio" name="frosting" value="Zanahoria" data-color="#E9C7A3"><span style="--sw:#E9C7A3">Zanahoria</span></label>
+          <label class="opt opt--sw"><input type="radio" name="frosting" value="Betabel" data-color="#E3BFC2"><span style="--sw:#E3BFC2">Betabel</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="label">Decoración</span>
+        <div class="opts" role="radiogroup" aria-label="Decoración">
+          <label class="opt"><input type="radio" name="topping" value="Hueso" checked data-top="bone"><span>Hueso</span></label>
+          <label class="opt"><input type="radio" name="topping" value="Patita" data-top="paw"><span>Patita</span></label>
+          <label class="opt"><input type="radio" name="topping" value="Corazón" data-top="heart"><span>Corazón</span></label>
+        </div>
+        <label class="check"><input type="checkbox" id="spotted" name="spotted"> <span>Costados con manchas de dálmata</span></label>
+      </div>
+
+      <div class="field">
+        <label for="petDate">¿Para cuándo?</label>
+        <input id="petDate" name="date" type="date">
+        <span class="hint">Necesitamos 48 h para pedidos personalizados</span>
+      </div>
+
+      <div class="custom__foot">
+        <p class="price">Total estimado <strong id="customPrice">$390 MXN</strong></p>
+        <button class="btn btn--dark" type="submit">Pedir por WhatsApp <svg class="ico ico--sm"><use href="#i-wa"/></svg></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS / POR QUÉ ============ -->
+<section class="section why" id="nosotros">
+  <div class="why__inner">
+    <div class="why__stamp reveal" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <defs>
+          <path id="arcTop" d="M150 150 m-112 0 a112 112 0 0 1 224 0" fill="none"/>
+          <path id="arcBottom" d="M150 150 m-131 0 a131 131 0 0 0 262 0" fill="none"/>
+        </defs>
+        <circle cx="150" cy="150" r="140" fill="none" stroke="#14110F" stroke-width="1.6"/>
+        <circle cx="150" cy="150" r="130" fill="none" stroke="#14110F" stroke-width="1"/>
+        <text class="serif" font-size="19" letter-spacing="4.4" fill="#14110F">
+          <textPath href="#arcTop" startOffset="50%" text-anchor="middle">HECHO CON AMOR</textPath>
+        </text>
+        <text class="serif" font-size="19" letter-spacing="4.4" fill="#14110F">
+          <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">PARA TU MEJOR AMIGO</textPath>
+        </text>
+        <circle cx="26" cy="150" r="3.4" fill="#14110F"/>
+        <circle cx="274" cy="150" r="3.4" fill="#14110F"/>
+        <!-- dálmata sentado -->
+        <g transform="translate(80 88)" fill="none" stroke="#14110F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <!-- cola -->
+          <path d="M97 106c9-1 13-9 11-17"/>
+          <!-- cuerpo sentado -->
+          <path d="M66 54c-15 5-26 17-30 32-3 11-3 21-1 28h60c2-7 3-17 0-28-4-15-14-27-29-32Z" fill="#FBF9F5"/>
+          <!-- patas -->
+          <path d="M53 88c5 7 7 16 7 26M78 88c-4 7-6 16-6 26"/>
+          <!-- orejas -->
+          <path d="M50 26c-9-3-16 4-16 13s6 16 13 15" fill="#FBF9F5"/>
+          <path d="M83 26c9-3 16 4 16 13s-6 16-13 15" fill="#FBF9F5"/>
+          <!-- cabeza -->
+          <circle cx="66" cy="34" r="20" fill="#FBF9F5"/>
+          <ellipse cx="66" cy="45" rx="10" ry="7" fill="#FBF9F5"/>
+          <ellipse cx="66" cy="41" rx="3.6" ry="2.6" fill="#14110F" stroke="none"/>
+          <path d="M66 44v4M66 48c-3 3-7 3-9 1M66 48c3 3 7 3 9 1" stroke-width="2"/>
+          <circle cx="57" cy="30" r="2.2" fill="#14110F" stroke="none"/>
+          <circle cx="75" cy="30" r="2.2" fill="#14110F" stroke="none"/>
+          <!-- manchas -->
+          <ellipse cx="52" cy="70" rx="6" ry="4.6" fill="#14110F" stroke="none" transform="rotate(-16 52 70)"/>
+          <ellipse cx="76" cy="82" rx="5" ry="3.8" fill="#14110F" stroke="none" transform="rotate(14 76 82)"/>
+          <ellipse cx="45" cy="94" rx="4" ry="3" fill="#14110F" stroke="none"/>
+          <ellipse cx="83" cy="34" rx="4.4" ry="3.4" fill="#14110F" stroke="none" transform="rotate(20 83 34)"/>
+          <ellipse cx="49" cy="22" rx="3.6" ry="2.8" fill="#14110F" stroke="none" transform="rotate(-12 49 22)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="why__copy reveal">
+      <h2 class="display">¿Por qué elegir<br>Beto Pasteles?</h2>
+      <ul class="why__list">
+        <li><svg class="ico"><use href="#i-heart"/></svg> Hechos con ingredientes naturales</li>
+        <li><svg class="ico"><use href="#i-leaf"/></svg> Sin conservadores ni aditivos</li>
+        <li><svg class="ico"><use href="#i-paw"/></svg> Recetas aprobadas por perritos expertos</li>
+        <li><svg class="ico"><use href="#i-box"/></svg> Empaque bonito y sustentable</li>
+      </ul>
+      <p class="why__text">Beto empezó como un pastel casero para el cumpleaños de un dálmata muy consentido. Hoy horneamos todos los días en Monterrey con harina de avena, plátano, manzana y yogur natural: nada de azúcar refinada, chocolate ni xilitol.</p>
+    </div>
+
+    <div class="why__art reveal" aria-hidden="true">
+      <svg viewBox="0 0 420 460">
+        <g fill="none" stroke="#14110F" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="210" cy="420" rx="140" ry="22" fill="#14110F" opacity=".06" stroke="none"/>
+
+          <!-- orejas (detrás de la cabeza) -->
+          <path d="M112 176c-30 4-46 42-38 84 7 38 30 62 54 64" fill="#FBF9F5"/>
+          <path d="M308 176c30 4 46 42 38 84-7 38-30 62-54 64" fill="#FBF9F5"/>
+          <!-- manchas de las orejas -->
+          <g fill="#14110F" stroke="none">
+            <ellipse cx="98" cy="230" rx="14" ry="11" transform="rotate(-18 98 230)"/>
+            <ellipse cx="112" cy="284" rx="10" ry="8" transform="rotate(12 112 284)"/>
+            <ellipse cx="326" cy="242" rx="12" ry="9" transform="rotate(16 326 242)"/>
+            <ellipse cx="312" cy="296" rx="9" ry="7" transform="rotate(-10 312 296)"/>
+          </g>
+
+          <!-- cabeza -->
+          <path d="M210 118c-56 0-98 40-98 96 0 66 44 116 98 116s98-50 98-116c0-56-42-96-98-96Z" fill="#FBF9F5"/>
+
+          <!-- manchas de la cara -->
+          <g fill="#14110F" stroke="none">
+            <ellipse cx="152" cy="164" rx="17" ry="13" transform="rotate(-20 152 164)"/>
+            <ellipse cx="262" cy="152" rx="13" ry="10" transform="rotate(16 262 152)"/>
+            <ellipse cx="206" cy="140" rx="9" ry="7" transform="rotate(-6 206 140)"/>
+            <ellipse cx="292" cy="196" rx="11" ry="8" transform="rotate(-24 292 196)"/>
+            <ellipse cx="134" cy="228" rx="10" ry="7" transform="rotate(22 134 228)"/>
+            <ellipse cx="150" cy="286" rx="9" ry="7" transform="rotate(10 150 286)"/>
+            <ellipse cx="278" cy="290" rx="12" ry="9" transform="rotate(-16 278 290)"/>
+          </g>
+
+          <!-- ojos -->
+          <ellipse cx="172" cy="196" rx="11" ry="13" fill="#14110F" stroke="none"/>
+          <ellipse cx="248" cy="196" rx="11" ry="13" fill="#14110F" stroke="none"/>
+          <circle cx="176" cy="190" r="3.4" fill="#FBF9F5" stroke="none"/>
+          <circle cx="252" cy="190" r="3.4" fill="#FBF9F5" stroke="none"/>
+          <path d="M156 172c6-6 16-7 22-3M242 169c6-4 16-3 22 3" stroke-width="2.4"/>
+
+          <!-- hocico -->
+          <ellipse cx="210" cy="264" rx="48" ry="38" fill="#FBF9F5"/>
+          <ellipse cx="210" cy="242" rx="18" ry="13" fill="#14110F" stroke="none"/>
+          <path d="M210 255v14M210 269c-8 10-21 10-27 2M210 269c8 10 21 10 27 2" stroke-width="2.6"/>
+          <ellipse cx="186" cy="284" rx="4" ry="3" fill="#14110F" stroke="none"/>
+          <ellipse cx="234" cy="288" rx="3.4" ry="2.6" fill="#14110F" stroke="none"/>
+
+          <!-- collar -->
+          <path d="M138 318c22 18 46 26 72 26s50-8 72-26" stroke-width="3"/>
+          <circle cx="210" cy="352" r="12" fill="#DFC49A"/>
+          <g transform="translate(196 346) scale(.28)" fill="#14110F" stroke="none">
+            <path d="M26 4c7 0 12 5 12 11h24c0-6 5-11 12-11s12 5 12 11c0 2-1 4-2 6 1 2 2 4 2 6 0 6-5 11-12 11s-12-5-12-11H38c0 6-5 11-12 11s-12-5-12-11c0-2 1-4 2-6-1-2-2-4-2-6 0-6 5-11 12-11Z"/>
+          </g>
+
+          <!-- gorrito de fiesta -->
+          <g transform="rotate(16 300 130)">
+            <path d="M300 76 330 148H270Z" fill="#FBF9F5"/>
+            <path d="M282 128c12 5 24 5 36 0M288 108c8 3 18 3 24 0" stroke-width="2.4"/>
+            <circle cx="300" cy="69" r="9" fill="#DFC49A"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section section--tight" id="opiniones">
+  <header class="sechead reveal">
+    <h2 class="display">Lo que opinan nuestros clientes</h2>
+    <svg class="sechead__heart ico"><use href="#i-heart"/></svg>
+    <p class="sechead__aside">(Si la hubiera escrito un perro)</p>
+  </header>
+
+  <div class="quotes">
+    <figure class="quote reveal">
+      <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+      <blockquote>¡El pastel estuvo increíble!<br>Me lo comí en 2 minutos<br>y hasta lamí la caja.</blockquote>
+      <figcaption>— Max</figcaption>
+      <svg class="quote__ico ico"><use href="#i-paw"/></svg>
+    </figure>
+    <figure class="quote reveal">
+      <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+      <blockquote>Las galletas son mis favoritas.<br>Crujientes, deliciosas y<br>huelen a amor.</blockquote>
+      <figcaption>— Koda</figcaption>
+      <svg class="quote__ico ico"><use href="#i-bone"/></svg>
+    </figure>
+    <figure class="quote reveal">
+      <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+      <blockquote>Mi humano pidió el pastel<br>personalizado y quedó hermoso.<br>Yo feliz, él más feliz.</blockquote>
+      <figcaption>— Nala</figcaption>
+      <svg class="quote__ico ico"><use href="#i-heart"/></svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="news band" id="contacto">
+  <div class="news__inner">
+    <div class="news__art reveal" aria-hidden="true">
+      <svg viewBox="0 0 460 300">
+        <defs>
+          <pattern id="pSpots2" width="64" height="64" patternUnits="userSpaceOnUse">
+            <ellipse cx="14" cy="16" rx="6.4" ry="5" fill="#14110F" transform="rotate(-20 14 16)"/>
+            <ellipse cx="44" cy="38" rx="4.6" ry="3.6" fill="#14110F" transform="rotate(25 44 38)"/>
+            <ellipse cx="26" cy="52" rx="3.6" ry="2.8" fill="#14110F"/>
+            <ellipse cx="56" cy="10" rx="3" ry="2.4" fill="#14110F"/>
+          </pattern>
+        </defs>
+        <ellipse cx="230" cy="272" rx="200" ry="22" fill="#14110F" opacity=".07"/>
+        <!-- caja -->
+        <path d="M30 120h210v150H30z" fill="#FFFDF9" stroke="#14110F" stroke-width="2.4"/>
+        <path d="M30 120h210v150H30z" fill="url(#pSpots2)"/>
+        <path d="M22 96h226v28H22z" fill="#FFFDF9" stroke="#14110F" stroke-width="2.4"/>
+        <path d="M22 96h226v28H22z" fill="url(#pSpots2)" opacity=".5"/>
+        <text class="serif" x="135" y="200" text-anchor="middle" font-size="34" fill="#14110F" letter-spacing="2">BETO</text>
+        <text class="serif" x="135" y="228" text-anchor="middle" font-size="17" fill="#14110F" letter-spacing="4">PASTELES</text>
+        <!-- bolsita de tela con cordón -->
+        <g fill="none" stroke="#14110F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M290 192c0-13 11-22 26-22h68c15 0 26 9 26 22l-7 82c-1 11-9 18-20 18h-66c-11 0-19-7-20-18Z" fill="#F4EFE4"/>
+          <!-- pliegues del cuello -->
+          <path d="M308 172c0-11 4-19 10-25M332 170c-1-10 1-18 4-24M368 170c1-10-1-18-4-24M392 172c0-11-4-19-10-25" stroke-width="1.9"/>
+          <!-- cordón y moño -->
+          <path d="M290 188c18 8 38 11 60 11s42-3 60-11" stroke-width="2"/>
+          <path d="M406 188c7-7 16-5 16 2s-9 9-16 2Zm0 0c7 7 16 5 16-2" fill="#F4EFE4" stroke-width="1.9"/>
+          <path d="M420 196c4 8 8 13 12 16" stroke-width="1.5"/>
+          <circle cx="437" cy="224" r="15" fill="#FBF9F5" stroke-width="1.6"/>
+          <circle cx="437" cy="213" r="1.8" stroke-width="1.2"/>
+          <!-- dálmata -->
+          <g transform="translate(295 191) scale(.78)" stroke-width="3">
+            <path d="M97 106c9-1 13-9 11-17"/>
+            <path d="M66 54c-15 5-26 17-30 32-3 11-3 21-1 28h60c2-7 3-17 0-28-4-15-14-27-29-32Z" fill="#FBF9F5"/>
+            <path d="M53 88c5 7 7 16 7 26M78 88c-4 7-6 16-6 26"/>
+            <path d="M50 26c-9-3-16 4-16 13s6 16 13 15" fill="#FBF9F5"/>
+            <path d="M83 26c9-3 16 4 16 13s-6 16-13 15" fill="#FBF9F5"/>
+            <circle cx="66" cy="34" r="20" fill="#FBF9F5"/>
+            <ellipse cx="66" cy="45" rx="10" ry="7" fill="#FBF9F5"/>
+            <ellipse cx="66" cy="41" rx="3.6" ry="2.6" fill="#14110F" stroke="none"/>
+            <circle cx="57" cy="30" r="2.4" fill="#14110F" stroke="none"/>
+            <circle cx="75" cy="30" r="2.4" fill="#14110F" stroke="none"/>
+            <ellipse cx="52" cy="70" rx="6" ry="4.6" fill="#14110F" stroke="none" transform="rotate(-16 52 70)"/>
+            <ellipse cx="76" cy="82" rx="5" ry="3.8" fill="#14110F" stroke="none" transform="rotate(14 76 82)"/>
+          </g>
+        </g>
+        <g transform="translate(426 219) scale(.22)" fill="#14110F">
+          <path d="M26 4c7 0 12 5 12 11h24c0-6 5-11 12-11s12 5 12 11c0 2-1 4-2 6 1 2 2 4 2 6 0 6-5 11-12 11s-12-5-12-11H38c0 6-5 11-12 11s-12-5-12-11c0-2 1-4 2-6-1-2-2-4-2-6 0-6 5-11 12-11Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="news__copy reveal">
+      <h2 class="display">Sé el primero en enterarte</h2>
+      <p class="lead">Nuevos productos, promociones y tips para<br>hacer feliz a tu peludo.</p>
+      <form class="news__form" id="newsForm" novalidate>
+        <label class="sr" for="email">Tu correo electrónico</label>
+        <input id="email" name="email" type="email" placeholder="Tu correo electrónico" autocomplete="email" required>
+        <button class="btn btn--dark" type="submit">Suscribirme <svg class="ico ico--sm"><use href="#i-paw"/></svg></button>
+      </form>
+      <p class="formmsg" id="newsMsg" role="status" aria-live="polite"></p>
+
+      <ul class="contactlist">
+        <li><svg class="ico ico--sm"><use href="#i-wa"/></svg> <a href="https://wa.me/528112345678">81 1234 5678</a></li>
+        <li><svg class="ico ico--sm"><use href="#i-heart"/></svg> <a href="mailto:hola@betopasteles.mx">hola@betopasteles.mx</a></li>
+        <li><svg class="ico ico--sm"><use href="#i-box"/></svg> Entregas en Monterrey y área metropolitana · envíos a todo México</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__social">
+      <a href="https://instagram.com" aria-label="Instagram" class="iconbtn"><svg class="ico"><use href="#i-ig"/></svg></a>
+      <a href="https://facebook.com" aria-label="Facebook" class="iconbtn"><svg class="ico"><use href="#i-fb"/></svg></a>
+      <a href="https://wa.me/528112345678" aria-label="WhatsApp" class="iconbtn"><svg class="ico"><use href="#i-wa"/></svg></a>
+    </div>
+    <a class="brand brand--center" href="#inicio">
+      <span class="brand__name">Beto<br>Pasteles</span>
+      <span class="brand__tag">Pasteles y galletas para perros</span>
+    </a>
+    <nav class="footer__legal" aria-label="Enlaces legales">
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Aviso de privacidad</a>
+    </nav>
+  </div>
+  <p class="footer__copy">© <span id="year">2026</span> Beto Pasteles · Hecho con amor en Monterrey, MX</p>
+</footer>
+
+<!-- ============ CARRITO ============ -->
+<div class="overlay" id="overlay" hidden></div>
+<aside class="cart" id="cart" aria-label="Carrito de compras" aria-hidden="true">
+  <header class="cart__head">
+    <h2>Tu carrito</h2>
+    <button class="iconbtn" id="cartClose" aria-label="Cerrar carrito"><svg class="ico"><use href="#i-close"/></svg></button>
+  </header>
+  <div class="cart__body" id="cartBody">
+    <p class="cart__empty">Todavía no hay nada aquí.<br><span>Tu peludo está esperando.</span></p>
+  </div>
+  <footer class="cart__foot">
+    <div class="cart__total"><span>Total</span><strong id="cartTotal">$0 MXN</strong></div>
+    <p class="cart__note">Envío gratis en pedidos mayores a $700 MXN</p>
+    <button class="btn btn--dark btn--block" id="checkout" disabled>Finalizar pedido por WhatsApp <svg class="ico ico--sm"><use href="#i-wa"/></svg></button>
+  </footer>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
